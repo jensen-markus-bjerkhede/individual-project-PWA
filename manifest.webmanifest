@@ -1,0 +1,19 @@
+{
+  "name": "Individual-Project-Pwa",
+  "short_name": "PWA",
+  "description": "En enkel PWA app som ska vara installerbar",
+  "display": "standalone",
+  "start_url": "/",
+  "icons": [
+    {
+      "src": "img/instagram.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    },
+    {
+      "src": "img/instagram (1).png",
+      "sizes": "128x128",
+      "type": "image/png"
+    }
+  ]
+}

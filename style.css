@@ -1,0 +1,26 @@
+body {
+  background-color: #ba8411;
+}
+
+.error {
+  color: #97250C;
+  font-weight: bold;
+  font-size: 1.2em;
+  background-color: #EEBC4D;
+  padding: 0.5em;
+  min-height: 1.5em;
+}
+
+button {
+  background-color: #EEBC4D;
+  padding: 0.8em 1.2em;
+  margin: 0.4em;
+}
+.profile img {
+  width: 192px;
+  height: 192px;
+}
+
+.hidden {
+  display: none;
+}

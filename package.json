@@ -1,0 +1,17 @@
+  
+{
+  "name": "Instablam",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "deploy": "surge . --domain murky-yarn.surge.sh",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "surge": "^0.21.7"
+  }
+}

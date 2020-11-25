@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="utf-8">
+    <title> User profile </title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="manifest" href="manifest.webmanifest">
+    <link rel="stylesheet" href="style.css">
+    <script src="script/script.js" charset="utf-8"></script>
+</head>
+<body>
+    <main>
+        <section class="profile">
+            <h1> User profile </h1>
+            <img src="" alt="Profile picture" class="hidden" />
+            <p>
+                Egon  <br>
+                <button disabled> Take picture </button>
+            </p>
+        </section>
+        <section class="video">
+            <div class="">
+                <button class="start-stream"> Show camera video </button>
+                <button class="stop-stream" disabled> Stop video </button>
+                <button class="change-facing"> Show environment </button>
+            </div>
+            <div class="">
+                <button class="start-recording" disabled> Record video </button>
+                <button class="stop-recording" disabled> Stop recording </button>
+                <a href="" download class="downloadLink hidden"> Download </a>
+            </div>
+
+
+            <p class="message error"> <!-- Plats för felmeddelanden --> </p>
+            <video src="" autoplay poster="" controls>
+
+            </video>
+        </section>
+    </main>
+</body>
+</html>
