@@ -1,0 +1,44 @@
+body {
+  background-color: #ffffff;
+}
+.flex-wrap {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.error {
+  color: #97250C;
+  font-weight: bold;
+  font-size: 1.2em;
+  background-color: #ffffff;
+  padding: 0.5em;
+  min-height: 1.5em;
+}
+
+.button1 {
+  {
+    background-color: #dddddd
+     display: inline-block;
+     padding: 0.35em 1.2em;
+     border: 0.1em solid #FFFFFF;
+     margin: 0 0.3em 0.3em 0;
+     border-radius: 0.12em;
+     box-sizing: border-box;
+     text-decoration: none;
+     font-weight: 300;
+     transition: all 0.2s;
+    }
+    button:hover{
+     color:#000000;
+     background-color:#FFFFFF;
+    }
+    }
+.profile img {
+  width: 192px;
+  height: 192px;
+}
+
+.hidden {
+  display: none;
+}
