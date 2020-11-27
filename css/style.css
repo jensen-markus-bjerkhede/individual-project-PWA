@@ -4,7 +4,6 @@ body {
 .flex-wrap {
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
 }
 .error {
@@ -17,23 +16,27 @@ body {
 }
 
 .button1 {
-  {
-    background-color: #dddddd
-     display: inline-block;
-     padding: 0.35em 1.2em;
-     border: 0.1em solid #FFFFFF;
-     margin: 0 0.3em 0.3em 0;
-     border-radius: 0.12em;
-     box-sizing: border-box;
-     text-decoration: none;
-     font-weight: 300;
-     transition: all 0.2s;
-    }
-    button:hover{
-     color:#000000;
-     background-color:#FFFFFF;
-    }
-    }
+     background-color: #dddddd;
+     display:inline-block;
+     padding: 1rem;
+     border: 0.2rem solid black;
+     border-radius: 0.5rem;
+     }
+     .button1:hover {
+      background-color: grey;
+      color: white;
+     }
+
+.button2 {
+    position: absolute;
+    margin: 0.2rem;
+    text-decoration: none;
+    background-color: #EEEEEE;
+    color: #333333;
+    padding: 0.4rem 1rem 0.4rem 1rem;
+    border: 0.5rem solid #CCCCCC;
+}
+    
 .profile img {
   width: 192px;
   height: 192px;
