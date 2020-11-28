@@ -1,47 +1,67 @@
 body {
-  background-color: #ffffff;
-}
-.flex-wrap {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-.error {
-  color: #97250C;
-  font-weight: bold;
-  font-size: 1.2em;
-  background-color: #ffffff;
-  padding: 0.5em;
-  min-height: 1.5em;
+    background-color: #ffffff;
 }
 
-.button1 {
-     background-color: #dddddd;
-     display:inline-block;
-     padding: 1rem;
-     border: 0.2rem solid black;
-     border-radius: 0.5rem;
-     }
-     .button1:hover {
-      background-color: grey;
-      color: white;
-     }
+.flex-wrap {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.error {
+    color: #97250C;
+    font-weight: bold;
+    font-size: 1.2em;
+    background-color: #ffffff;
+    padding: 0.5em;
+    min-height: 1.5em;
+}
+
+.switchView {
+    display: flex;
+    justify-content: space-between;
+}
+
+.switchViewButton {
+    color: black;
+    background-color: #ddddddea;
+    display: inline-block;
+    padding: 1rem;
+    border: 0.2rem solid black;
+    border-radius: 0.5rem;
+}
+
+.takePictureButton {
+    text-decoration: none;
+    color: black;
+    justify-content: center;
+    align-items: center;
+    background-color: #ddddddea;
+    display: inline-block;
+    padding: 1rem;
+    border: 0.2rem solid black;
+    border-radius: 0.5rem;
+}
+
+.takePictureButton:hover {
+    background-color: grey;
+    color: white;
+}
 
 .button2 {
-    position: absolute;
-    margin: 0.2rem;
+    /* margin: 0.2rem; */
     text-decoration: none;
     background-color: #EEEEEE;
     color: #333333;
     padding: 0.4rem 1rem 0.4rem 1rem;
     border: 0.5rem solid #CCCCCC;
 }
-    
+
 .profile img {
-  width: 192px;
-  height: 192px;
+    width: 192px;
+    height: 192px;
 }
 
 .hidden {
-  display: none;
+    display: none;
 }
