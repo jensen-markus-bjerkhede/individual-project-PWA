@@ -31,6 +31,18 @@ body {
     border-radius: 0.5rem;
 }
 
+.libraryButton {
+    text-decoration: none;
+    color: black;
+    justify-content: center;
+    align-items: center;
+    background-color: #ddddddea;
+    display: inline-block;
+    padding: 1rem;
+    border: 0.2rem solid black;
+    border-radius: 0.5rem;
+}
+
 .takePictureButton {
     text-decoration: none;
     color: black;

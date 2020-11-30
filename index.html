@@ -1,51 +1,33 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
+<html lang="en">
 
 <head>
-    <meta charset="utf-8">
-    <title> Instablam </title>
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="manifest" href="manifest.webmanifest">
-    <link rel="stylesheet" href="css/style.css">
-    <script src="script/camera.js" charset="utf-8"></script>
+    <title>Photolibrary</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
-    <link rel="stylesheet" href="index.html">
+    <link rel="stylesheet" href="css/Photo.css">
 </head>
 
 <body>
-    <main>
-        <div class="flex-wrap">
-            <section class="profile">
-                <h1> User profile </h1>
-                <img src="" alt="Profile picture" class="hidden" />
+    <div class="flex-wrap">
+        <section>
+            <img src="img/kitten.jpg" alt="kitten">
+            <img src="img/kittens.jpg" alt="kittens">
+            <img src="img/kittens.jpg" alt="kittens">
+            <img src="img/kittens.jpg" alt="kittens">
+            <img src="img/kittens.jpg" alt="kittens">
+            <img src="img/kittens.jpg" alt="kittens">
+            <img src="img/kittens.jpg" alt="kittens">
+            <img src="img/kittens.jpg" alt="kittens">
+            <img src="img/kittens.jpg" alt="kittens">
+            <img src="img/kittens.jpg" alt="kittens">
 
-            </section>
-
-            <section class="video">
-
-                <div class="">
-                    <a href="" download class="downloadLink hidden"> Download </a>
-                </div>
-
-
-                <p class="message error">
-                    <!-- Plats för felmeddelanden -->
-                </p>
-                <div class="switchView">
-                    <a class="takePictureButton" href="photoLibrary.html">Photo Library</a>
-                    <button class="switchViewButton" disabled>
-                <i class="fas fa-sync-alt"></i></button>
-                </div>
-                <video src="" autoplay poster="" controls>
-
-            </video>
-                <div class="flex-wrap">
-                    <button class="takePictureButton"> Show camera video</button>
-                </div>
-
-            </section>
-        </div>
-    </main>
+        </section>
+        <aside class="cameraButton">
+            <a class="start-stream" href="camera.html"><i class="fas fa-camera"></i></a>
+        </aside>
+    </div>
 </body>
 
 </html>
