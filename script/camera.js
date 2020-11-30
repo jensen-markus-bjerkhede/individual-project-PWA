@@ -5,19 +5,10 @@ if ('serviceWorker' in navigator) {
         })
 }
 
-// async function allowCamera() {
-//     if( 'mediaDevices' in navigator ) {
-//         const md = navigator.mediaDevices;
-//         let stream = await md.getUserMedia({
-//             audio: false,
-//             video: true
-//         });
-//     }
-// }
-//allowCamera();
-
+let stream;
 
 window.addEventListener('load', () => {
+    console.log(localStorage.getItem('pictureList'))
     if ('mediaDevices' in navigator) {
         cameraSettings();
         startCamera();
@@ -35,10 +26,8 @@ async function startCamera() {
         })
 
         const video = document.querySelector('.video > video');
-        console.log('stream: ' + stream)
+        // console.log('stream: ' + stream)
         video.srcObject = stream;
-        photoButton.disabled = false;
-
     } catch (e) {
         console.log(e)
             // Visa felmeddelande för användaren:
@@ -48,13 +37,12 @@ async function startCamera() {
 
 async function cameraSettings() {
     // const errorMessage = document.querySelector('.video > .error');
-    const switchViewButton = document.querySelector('.switchView .switchViewButton');
+    const switchViewButton = document.querySelector('.buttonRow .switchViewButton');
     const photoButton = document.querySelector('.flex-wrap .buttonTag button');
     // const downloadLink = document.querySelector('.video .downloadLink');
     // .profile > p > button  --> 012, omständigt men mer specifikt
     // .profile       button  --> 011, enklare
 
-    let stream;
     let facing = 'environment';
     // User clicks "Show camera window"
 
@@ -66,24 +54,32 @@ async function cameraSettings() {
             facing = 'environment';
             switchViewButton.innerHTML = 'Show environment';
         }
-        stopButton.click();
-        showVideoButton.click();
     })
 
     photoButton.addEventListener('click', async() => {
-        // errorMessage.innerHTML = '';
         if (!stream) {
-            // errorMessage.innerHTML = 'No video to take photo from.';
+            //errorMessage.innerHTML = 'no video to take photo from.';
             return;
-        }
-
+        } // errorMessage.innerHTML = '';
         let tracks = stream.getTracks();
         let videoTrack = tracks[0];
         let capture = new ImageCapture(videoTrack);
         let blob = await capture.takePhoto();
 
         let imgUrl = URL.createObjectURL(blob);
-        profilePic.src = imgUrl;
-        profilePic.classList.remove('hidden');
+        await savePhoto(imgUrl)
+
+
     })
+}
+
+async function savePhoto(img) {
+    let picList = localStorage.getItem('pictureList');
+    if (!picList) {
+        picList = [];
+    } else {
+        picList = JSON.parse(picList);
+    }
+    picList.push(img);
+    localStorage.setItem('pictureList', JSON.stringify(picList));
 }

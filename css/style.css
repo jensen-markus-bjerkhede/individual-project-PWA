@@ -17,7 +17,7 @@ body {
     min-height: 1.5em;
 }
 
-.switchView {
+.buttonRow {
     display: flex;
     justify-content: space-between;
 }
