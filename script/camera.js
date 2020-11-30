@@ -8,7 +8,7 @@ if ('serviceWorker' in navigator) {
 let stream;
 
 window.addEventListener('load', () => {
-    console.log(localStorage.getItem('pictureList'))
+    let list = JSON.parse(localStorage.getItem('pictureList'));
     if ('mediaDevices' in navigator) {
         cameraSettings();
         startCamera();
@@ -47,7 +47,7 @@ async function cameraSettings() {
     // User clicks "Show camera window"
 
     switchViewButton.addEventListener('click', () => {
-        if (facing == 'environment') {
+        if (facing === 'environment') {
             facing = 'user';
             switchViewButton.innerHTML = 'Show user';
         } else {
@@ -65,11 +65,7 @@ async function cameraSettings() {
         let videoTrack = tracks[0];
         let capture = new ImageCapture(videoTrack);
         let blob = await capture.takePhoto();
-
-        let imgUrl = URL.createObjectURL(blob);
-        await savePhoto(imgUrl)
-
-
+        await savePhoto(imgUrlToBase64(URL.createObjectURL(blob)))
     })
 }
 
@@ -80,6 +76,33 @@ async function savePhoto(img) {
     } else {
         picList = JSON.parse(picList);
     }
-    picList.push(img);
+
+    picList.push(await createPhotoObject(img, 57.65098309999999, 12.043935));
     localStorage.setItem('pictureList', JSON.stringify(picList));
+    console.log('img' + img);
+}
+
+async function createPhotoObject(base64String, geoLat, geoLong) {
+    return {
+        base64String: base64String,
+        geoLat: geoLat,
+        geoLong: geoLong,
+        timeStamp: Date.now()
+    }
+}
+
+function imgUrlToBase64(imgUrl) {
+    let htmlImageElement = document.createElement('img');
+    htmlImageElement.src = imgUrl;
+
+    const canvas = document.createElement('canvas');
+    const ctx = canvas.getContext('2d');
+    canvas.width = 420;
+    canvas.height = 380;
+
+    // I think this won't work inside the function from the console
+    htmlImageElement.crossOrigin = 'anonymous';
+    ctx.drawImage(htmlImageElement, 0, 0);
+
+    return canvas.toDataURL();
 }
