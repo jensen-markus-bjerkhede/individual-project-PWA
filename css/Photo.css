@@ -1,5 +1,5 @@
 body {
-    background-color: black;
+    /* background-color: black; */
     margin: 0;
 }
 
@@ -15,11 +15,11 @@ a:link {
     text-decoration: none
 }
 
-section {
+.pictureList {
     margin-top: 2rem;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 1rem;
+    gap: 2rem;
 }
 
 img {
