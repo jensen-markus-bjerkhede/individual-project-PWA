@@ -49,15 +49,16 @@ async function cameraSettings() {
     const switchViewButton = document.querySelector('.buttonRow .switchViewButton');
     const photoButton = document.querySelector('.flex-wrap .buttonTag button');
 
-    facing = 'enviroment'
+    facing = 'environment'
 
     switchViewButton.addEventListener('click', () => {
         if (facing === 'environment') {
             facing = 'user';
-            // switchViewButton.innerHTML = 'Show user';
+            startCamera()
         } else {
             facing = 'environment';
-            // switchViewButton.innerHTML = 'Show environment';
+            startCamera()
+
         }
     })
 
