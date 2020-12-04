@@ -1,6 +1,3 @@
-// The purpose of this file is to provide a minimal service worker file
-// It is not complete, but it should be enough for you to get started
-
 const projectName = 'INDIVIDUAL-PROJECT-PWA';
 
 self.addEventListener('install', function(event) {

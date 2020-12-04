@@ -25,13 +25,13 @@ a:link {
 img {
     justify-content: center;
     align-items: center;
-    width: 420px;
-    height: 380px;
+    width: 400px;
+    height: 360px;
     object-fit: cover;
 }
 
 .cameraButton {
-    /* position: -webkit-sticky; */
+    position: -webkit-sticky;
     text-decoration: none;
     display: block;
     justify-content: center;
@@ -46,8 +46,13 @@ img {
     border: 0.5rem solid #CCCCCC;
 }
 
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 800px) {
     section {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        gap: 1rem;
+    }
+    .pictureList {
         display: grid;
         grid-template-columns: repeat(1, 1fr);
         gap: 1rem;

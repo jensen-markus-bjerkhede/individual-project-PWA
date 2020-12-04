@@ -5,6 +5,7 @@ if ('serviceWorker' in navigator) {
         })
 }
 
+
 let stream;
 let longitude;
 let latitude;
@@ -42,7 +43,7 @@ async function startCamera() {
         const video = document.querySelector('.video > video');
         video.srcObject = stream;
     } catch (e) {
-        console.log(e)
+        messageError.innerHTML = 'Could not show camera';
     }
 }
 
@@ -64,9 +65,8 @@ async function cameraSettings() {
 
     photoButton.addEventListener('click', async() => {
         if (!stream) {
-            //errorMessage.innerHTML = 'no video to take photo from.';
             return;
-        } // errorMessage.innerHTML = '';
+        } 
         let tracks = stream.getTracks();
         let videoTrack = tracks[0];
         let capture = new ImageCapture(videoTrack);

@@ -8,8 +8,8 @@ body {
     align-items: center;
 }
 
-.error {
-    color: #97250C;
+#messageError {
+    margin: 3rem;
     font-weight: bold;
     font-size: 1.2em;
     background-color: #ffffff;
@@ -61,7 +61,6 @@ body {
 }
 
 .button2 {
-    /* margin: 0.2rem; */
     text-decoration: none;
     background-color: #EEEEEE;
     color: #333333;
@@ -74,6 +73,6 @@ body {
     height: 192px;
 }
 
-.hidden {
+/* .hidden {
     display: none;
-}
+} */

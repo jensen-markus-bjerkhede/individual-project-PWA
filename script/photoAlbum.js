@@ -46,5 +46,7 @@ function createSection(img) {
     span.appendChild(txt);
     section.appendChild(span);
     return section;
+    // if  (imageElement.src = null)
+    
 
 }
