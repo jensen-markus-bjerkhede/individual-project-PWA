@@ -1,3 +1,9 @@
+if ('serviceWorker' in navigator) {
+    navigator.serviceWorker.register('sw.js')
+        .then(reg => {
+            console.log('Service worker registered.');
+        })
+}
 let photoAlbum;
 
 window.addEventListener('load', async() => {
@@ -41,8 +47,10 @@ function createSection(img) {
     let imageElement = document.createElement('img');
     imageElement.src = img.base64String;
     section.appendChild(imageElement);
+    let br = document.createElement('br')
     let span = document.createElement('span');
     let txt = document.createTextNode(`${img.address}`);
+    section.appendChild(br)
     span.appendChild(txt);
     section.appendChild(span);
     return section;

@@ -3,7 +3,7 @@
     "short_name": "PWA",
     "description": "En enkel PWA app som ska vara installerbar",
     "display": "standalone",
-    "start_url": "/",
+    "start_url": "https://markusbjerkhede2",
     "icons": [{
             "src": "img/instagram-512.png",
             "sizes": "512x512",
@@ -12,7 +12,16 @@
         {
             "src": "img/instagram-128.png",
             "sizes": "128x128",
-            "type": "image/png"
+            "type": "image/png",
+            "purpose": "any maskable"
         }
-    ]
+
+    ],
+    "permissions": {
+        "video-capture": {
+            "description": "Required to capture video using getUserMedia()"
+        }
+    },
+    "background_color": "#ba8411",
+    "theme_color": "#ba8411"
 }

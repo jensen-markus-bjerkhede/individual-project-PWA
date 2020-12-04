@@ -4,8 +4,7 @@ if ('serviceWorker' in navigator) {
             console.log('Service worker registered.');
         })
 }
-
-
+let facing
 let stream;
 let longitude;
 let latitude;
@@ -34,7 +33,6 @@ async function loadGeoLocation() {
 
 async function startCamera() {
     try {
-        let facing = 'environment';
         const md = navigator.mediaDevices;
         stream = await md.getUserMedia({
             video: { width: 320, height: 320, facingMode: facing }
@@ -51,7 +49,7 @@ async function cameraSettings() {
     const switchViewButton = document.querySelector('.buttonRow .switchViewButton');
     const photoButton = document.querySelector('.flex-wrap .buttonTag button');
 
-    let facing = 'environment';
+    facing = 'enviroment'
 
     switchViewButton.addEventListener('click', () => {
         if (facing === 'environment') {
@@ -66,7 +64,7 @@ async function cameraSettings() {
     photoButton.addEventListener('click', async() => {
         if (!stream) {
             return;
-        } 
+        }
         let tracks = stream.getTracks();
         let videoTrack = tracks[0];
         let capture = new ImageCapture(videoTrack);
